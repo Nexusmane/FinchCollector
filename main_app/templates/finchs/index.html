@@ -5,13 +5,16 @@
 
 {% for finch in finchs %}
   <div class="card">
-    <div class="card-content">
-      <span class="card-title">{{ finch.name }}</span>
-      <p>Size: {{ finch.size }}</p>
-      <p>Description: {{ finch.description }}</p>
-    <p>Age: {{ finch.age }}</p>
+    <a href="{% url 'finchs_detail' finch.id %}">
+        <div class="card-content">
+          <span class="card-title">{{ finch.name }}</span>
+          <p>Size: {{ finch.size}}</p>
+          <p>Description: {{ finch.description }}</p>
+          <p>Age: {{ finch.age }}</p>
+        </div>
+      <!-- and this following one as well -->
+      </a>
     </div>
-  </div>
 {% endfor %}
 
 {% endblock %}
