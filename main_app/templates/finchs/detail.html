@@ -10,6 +10,10 @@
     <p>Description: {{ finch.description }}</p>
     <p>Age: {{ finch.age }}</p>
   </div>
+  <div class="card-action">
+    <a href="{% url 'finchs_update' finch.id %}">Edit Finch</a>
+    <a href="{% url 'finchs_delete' finch.id %}">Delete Finch</a>
+  </div>
 </div>
 
 {% endblock %}
